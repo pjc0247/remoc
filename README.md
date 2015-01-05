@@ -9,7 +9,12 @@ Basic Concept
 ```js
 var api = new Remoc("localhost");
 
-alert( api.sum(10,11) );
+alert( api.sum(10,11) ); // sync??
+alert( await api.sum(10,11) ); // await??
+
+api.sum(10,11, function(v){
+  alert(v);  // async??
+});
 ```
 
 * c/c++ (server-side)
